@@ -30,7 +30,7 @@ $config['mailtype'] = 'html';
 
 $this->email->initialize($config);
 
-$this->email->from('support@lotobitcoin.com', 'Lotobitcoin');
+$this->email->from('support@anyemail.com', 'Lotobitcoin');
 $this->email->to($email);
 
 $this->email->subject('Lotocode 2fa verication code');
@@ -70,7 +70,7 @@ $email->addTo($user_email, "kennow");
 $email->addContent(
     "text/html", $template
 );
-$sendgrid = new \SendGrid('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');
+$sendgrid = new \SendGrid('PRIVETE SENDGRID KEY');
 
     $response = $sendgrid->send($email);
     

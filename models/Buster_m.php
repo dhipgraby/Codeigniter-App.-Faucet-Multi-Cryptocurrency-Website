@@ -81,8 +81,8 @@ if(count($user)){
 
 $new_time = time();
 $ipp = $this->get_client_ip_server();
-
-$hash = '0480c0c45bb17541041c35e82553eec85c844268220427ac3f295440e9c1674c1e5a84cfbedf3bafc41caa721d8f39953a5b8e84840be0a821e3cc8ad97fc9b0e1c10cc862a5d1ab9dac';
+//COMMON HASH FOR ALL FAUCET USERS TO VALIDATE THEIR USING A RIGHT CRYPTO ADDRESS
+$hash = '0480c0c45bb17541041c35e82553eec85c844268220427ac3f295440e9c1674c1e5a84cfbedf3bafc41caa721d8f39953a5b8e8484';
 
 $data = array(
 

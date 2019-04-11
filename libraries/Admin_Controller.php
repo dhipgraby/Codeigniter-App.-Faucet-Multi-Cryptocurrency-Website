@@ -15,31 +15,21 @@ $this->data['meta_title'] = 'Lotobitcoin Market Place';
   $this->load->model('user_m');
   $this->load->model('login_m');
 
-    	// Login Check
+    	// Admin Login Check
 $array = array(
 
-'shinra',
-'vipcar',
-'mcatala',
+'Admin',
+'Admin1',
+
 
 );
 
-if(!in_array($this->session->name ,$array) || $this->login_m->loggedin() != TRUE){
+        if(!in_array($this->session->name ,$array) || $this->login_m->loggedin() != TRUE){
 
-redirect('main');
+        redirect('main');
 
-}
+        }
 
-
-/*
-if(in_array(uri_string(), $exeption_uris) == FALSE){
-
-if($this->user_m->loggedin() == FALSE) {
-
-redirect('admin/user/login');	
-			}
-
-        } */
       }
 
    }

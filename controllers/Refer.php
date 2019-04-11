@@ -15,9 +15,7 @@ class Refer extends Buster_Controller {
 public function index() {
 
    $id = $this->session->id;
-   //Checking for deposits
-//USE THIS FUNCTION TO GET DEPOSITS ==> $this->account_m->get_deposits($id);
-//Loading page views
+   
 	$this->data['pagetitle'] = "Referrals";
     $this->data['mainview'] = 'buster/user/referrals';
     $this->data['paginator'] = 'buster/user/paginator';

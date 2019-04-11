@@ -40,7 +40,6 @@
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-<!-- REMEMBER TO DOWNLOAD THE INTIRE ONE POPPER -->
 
 <script src="<?php echo base_url(); ?>/countdown/example/countDown.js"></script>
     <link href="<?php echo base_url(); ?>/countdown/example/style.css" media="all" rel="stylesheet" />

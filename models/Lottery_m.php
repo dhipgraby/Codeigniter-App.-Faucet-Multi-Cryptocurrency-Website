@@ -71,10 +71,7 @@ return $data;
  
 }
 
-//ADMIN FUNCTION TO CREATE LOTTERY BASE ON DATETIME GIVE IT BY SCRIPT
 function new_lottery(){
-
-//CAMBIAR EL TIEMPO A TODOS LOS VIERNES!!
 
 //then create a new one 
 $end = strtotime('today');
@@ -172,7 +169,8 @@ return ($this->db->affected_rows() < 1) ? FALSE : TRUE;
 
 }
 
-//SELECT RANDOM WINNERS 
+//SELECT RANDOM WINNERS EXAMPLE. THIS IS NOT FUNCTION FOR SELECTING REAL PLAYERS...
+//IF YOU WANT THE REAL FUNCTION WE USE TO SELECT WINNERS WRITE ME DOWN TO MY EMAIL
 public function all_players() {
 
 //Selecting all the players order by id
@@ -203,7 +201,6 @@ $winner = array(
 
   );
 
-//Setting each winner in database.
 $this->db->set($winner);
 $this->db->insert('lottery');
 

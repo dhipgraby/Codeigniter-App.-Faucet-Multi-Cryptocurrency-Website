@@ -5,9 +5,6 @@ class MY_Controller extends CI_Controller {
 	function __construct() {
       parent::__construct(); 
 
-
-//TRACKER
-
 $this->load->model('login_m');
 
       $this->data['errors'] = array();

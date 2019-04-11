@@ -308,7 +308,6 @@ for($i=$day_left;$i <= $day;$i++){
 
 $this->db->where('id',$id);
 $this->db->where('day',$i);
-//REMEMBER TO COUNT JUST THE VALID VIEWS AND NOT THE VIEWS
 $this->db->select_sum('validviews');
 $total[$i] = $this->db->get('views')->row()->validviews;
 

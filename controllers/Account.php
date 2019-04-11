@@ -126,7 +126,6 @@ if($this->account_m->save_info($data,$id) == true){
 $this->security_m->get_new($id);
 
 echo 1;
-//  $this->data['message'] = 'Change successful';
 
 }
 

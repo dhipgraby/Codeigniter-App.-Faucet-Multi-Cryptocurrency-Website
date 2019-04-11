@@ -228,12 +228,4 @@ echo $this->dice_m->table_result($id);
 
 }
 
-/*
-
-function rollHi(){}
-
-function rolLow(){}
-
-
-*/
 }

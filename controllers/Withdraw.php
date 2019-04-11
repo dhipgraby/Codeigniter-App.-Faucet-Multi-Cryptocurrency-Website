@@ -20,10 +20,7 @@ public function index() {
  $this->session->set_userdata('access', FALSE);
 
    $id = $this->session->id;
-   //Checking for deposits
-//USE THIS FUNCTION TO GET DEPOSITS ==> $this->account_m->get_deposits($id);
-//Loading page views
-    
+   
     $this->data['pagetitle'] = 'Withdrawals';
     $this->data['mainview'] = 'buster/user/withdraw';
     $this->data['withdraw_tab'] = 'buster/user/withdraw_tab';
@@ -237,8 +234,7 @@ if($this->_check_balance() == TRUE){
 
 
 $fees =  config_item($currency.'_fee');
-  $data['amount'] = $amount - $fees;
-        //PASS THIS TO CREDIT CONTROLLER
+  $data['amount'] = $amount - $fees;}
       $this->db->insert('withdraw', $data);
 
       $message = alert_msg("withdrawal success! Wait the status change to TxId Here, to check in blockchain","success");

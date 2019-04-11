@@ -15,7 +15,7 @@ public function index() {
     $id = $this->session->id;
   
   $credit = $this->credit_m->get($id);
-
+//IF NOT COUNT USER BALANCE TABLE, THEN CREATE NEW ONE
   if(!count($credit)) { $this->db->insert('credit',$this->login_m->new_credit($id)); }
 
 $f_user = $this->buster_m->getof($id);
@@ -26,7 +26,7 @@ $f_user = $this->buster_m->getof($id);
 $this->data['reward_time'] = $f_user->datetime + config_item('time_for_claim');
 $this->data['pagetitle'] = config_item('site_name').' Faucet<br><small>Claim every 30 minutes</small>';
  $this->data['mainview'] = 'buster/user/faucet';
- //loading coinjs
+ 
 
  $this->data['claim_btn'] = ($this->buster_m->faucet($id) == TRUE) ? new_button('claim','claim','success') : new_button('claim','claim','secondary');
 

@@ -42,7 +42,6 @@ $url ="https://chain.so/api/v2/address/".$coin."/".$address;
 $json = json_decode(file_get_contents($url), true);
 
 $status = $json['status'];
-//$balance = $json['data']['balance'];
 $received_value = $json['data']['received_value'];
 $pending_value = $json['data']['pending_value'];
 $total_txs = $json['data']['total_txs'];

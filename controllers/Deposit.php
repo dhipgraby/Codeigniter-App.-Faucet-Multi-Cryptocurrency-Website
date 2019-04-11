@@ -30,7 +30,7 @@ $this->data['amount'] = $value;
 $this->data['coin'] = $coin;
 
 $template = $this->load->view('buster/new_deposit', $this->data,TRUE);
-$user_email = 'kenneth.zambrano4@gmail.com';
+$user_email = '';
 
 $this->email_m->_sendgrid_email($user_email,$template);
 
@@ -44,8 +44,6 @@ echo alert_msg('You got a new '.$coin.' deposit!', 'success');
 public function index() {
 
    $id = $this->session->id;
-   //Checking for deposits
-//USE THIS FUNCTION TO GET DEPOSITS ==> $this->account_m->get_deposits($id);
 //Loading page views
 
 $this->data['pagetitle'] = 'Your deposit address';

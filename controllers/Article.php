@@ -14,7 +14,6 @@ public function index($id=NULL, $slug=NULL) {
 	//Fetch the article
 
 if(isset($id)){
-		//$this->article_m->set_published();
 	$this->db->where('id',$id);
 	$this->data['article'] = $this->db->get('articles')->row();
 	$this->db->limit(6);

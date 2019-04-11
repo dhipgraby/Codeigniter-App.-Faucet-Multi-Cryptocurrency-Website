@@ -188,7 +188,7 @@ else { $table = $this->_table_name; }
 
    }
 
-   
+   //CREATE TRANSACTION TO TRACK ALL MOVEMENTS OF THE USER
 function _create_trans($id,$amount,$coin,$type){
 
 $user_trans = $this->db->where('id',$id)->get('transactions')->row();
